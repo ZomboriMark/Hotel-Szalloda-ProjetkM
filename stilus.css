@@ -4,10 +4,10 @@ body {
 
     background-image:
         linear-gradient(
-            rgba(255, 255, 255, 0.6),
-            rgba(255, 255, 255, 0.6)
+            rgba(0, 0, 0, 0.266),
+            rgba(0, 0, 0, 0.266)
         ),
-        url("img/wallpaper.jpg");
+        url("img/wallpaper2.jpg");
 
     background-size: cover;
     background-position: center;
@@ -19,7 +19,13 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 15px 30px;
-    background-color: #80b2fd;
+    background-color: rgba(0, 0, 0, 0.297);
+    background-image: url(img/FejlecFoto.jpg);
+    
+}
+
+.Fejlec{
+    color: #ffffff;
 }
 
 nav h2 {
@@ -33,22 +39,56 @@ nav h2 {
 
 .nav-oldalak a {
     text-decoration: none;
-    color: #333;
+    color: #ffffff;
     font-weight: 500;
     position: relative;
     padding: 8px 14px;
     border-radius: 999px; 
     text-decoration: none;
-    color: #0f172a;
-    transition: 
-        background-color 0.25s ease,
-        color 0.25s ease,
-        transform 0.2s ease;
+    color: #ffffff;  
 }
 /* Hover-effekt a linkeken: enyhén kék háttér, fekete szöveg,
  apró lebegő animáció */
 .nav-oldalak a:hover {
-    background-color: rgba(0, 120, 255, 0.15);
-    color: #000000;
+    background-color: rgba(250, 250, 250, 0.15);
+    color: #ffffffef;
     transform: translateY(-1px);
 }
+
+.hero {
+    position: relative;
+    height: 80vh; /* a képernyő 80%-a */
+    margin-left: 20px;
+    margin-right: 20px;
+    background-image: url('img/Kezdolap.avif'); /* a nagy fotó */
+    background-size: cover; /* teljesen kitölti a divet */
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55); /* fekete áttetsző réteg a kép fölé */
+}
+
+.hero-text {
+    position: relative; /* a szöveg a overlay fölött legyen */
+    text-align: center;
+    color: #ffffff; /* fehér szöveg, jól látszik az overlayen */
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin: 5px;
+    margin-top: 10px;
+}
+
